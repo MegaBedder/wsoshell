@@ -1,4 +1,4 @@
-In WSO 2.8
+In FAKE WSO 2.8
 <pre>
 $visitc = $_COOKIE["visits"];
 if ($visitc == "") {
